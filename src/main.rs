@@ -398,37 +398,6 @@ fn main() {
     });
 }
 
-// fn draw_gltf_node_ui(ui: &mut egui::Ui, node: gltf::Node<'_>) {
-//     let name = node.name().unwrap_or("Unnamed Node");
-
-//     let is_leaf = node.children().len() == 0;
-//     if is_leaf {
-//         node_ui(ui, &name, true);
-//     }
-
-//     node.children().for_each(|child| {
-//         let id = ui.make_persistent_id(ui.next_auto_id());
-//         egui::collapsing_header::CollapsingState::load_with_default_open(ui.ctx(), id, true)
-//             .show_header(ui, |ui| {
-//                 node_ui(ui, &name, false);
-//             })
-//             .body(|ui| {
-//                 draw_gltf_node_ui(ui, child);
-//             });
-//     });
-// }
-
-// fn node_ui(ui: &mut egui::Ui, name: &str, is_leaf: bool) {
-//     let prefix = if is_leaf { "\t⭕" } else { "🔴" };
-//     let response = ui.selectable_label(false, format!("{prefix} {name}"));
-//     if response.clicked() {
-//         println!("Node selected: {name}");
-//     }
-//     response.context_menu(|ui| {
-//         ui.label("Shown on right-clicks");
-//     });
-// }
-
 #[repr(C)]
 #[derive(Copy, Clone, Debug, bytemuck::Pod, bytemuck::Zeroable)]
 struct Vertex {
