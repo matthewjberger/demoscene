@@ -1,0 +1,13 @@
+[package]
+name = "demoscene"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bytemuck = { version = "1.14.0", features = ["derive"] }
+image = "0.24.7"
+nalgebra-glm = { version = "0.18.0", features = ["convert-bytemuck"] }
+pollster = "0.3.0"
+raw-window-handle = "0.5.2"
+wgpu = "0.17.1"
+winit = "0.28.7"
